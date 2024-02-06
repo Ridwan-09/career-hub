@@ -26,6 +26,14 @@ const AppliedJobs = () => {
     return (
         <div>
             <h1 className="text-2xl">Jobs I applied: {appliedJobs.length}</h1>
+
+            <ul>
+                {
+                    appliedJobs.map(job => <li key={job.id}>
+                        <span>{job.job_title} {job.company_name}</span>
+                    </li>)
+                }
+            </ul>
         </div>
     );
 };
