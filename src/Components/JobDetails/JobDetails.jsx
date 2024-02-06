@@ -5,15 +5,20 @@ const JobDetails = () => {
     const jobs = useLoaderData();
     const {id} = useParams();
     const idInt = parseInt(id);
-    const job = jobs.find(job => job.id === id);
+    const job = jobs.find(job => job.id === idInt);
     return (
         <div>
-            <h2>Job Details of: </h2>
+            
             <div className="grid gap-4 md:grid-cols-4">
                 <div className="border md:col-span-3">
                     <div className="text-4xl">Details coming here</div>
+                    <h2>Job Details of: {job.job_title}</h2>
+                    <p>{job.job_company}</p>
                 </div>
-                <div className="border"></div>
+                <div className="border">
+                    <h2 className="text-2xl">Side things</h2>
+                    <button className="btn btn-primary w-full">Apply Now</button>
+                </div>
             </div>
         </div>
     );
