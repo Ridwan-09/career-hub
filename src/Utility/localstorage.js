@@ -15,4 +15,4 @@ const saveJobApplication = id => {
     }
 }
 
-export {saveJobApplication}
+export {getStoredJobApplication ,saveJobApplication}
