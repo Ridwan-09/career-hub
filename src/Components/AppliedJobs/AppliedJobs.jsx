@@ -45,9 +45,9 @@ const AppliedJobs = () => {
             <details className="dropdown">
                 <summary className="m-1 btn">open or close</summary>
                 <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                    <li><a>All</a></li>
-                    <li><a>Remote</a></li>
-                    <li><a>Onsite</a></li>
+                    <li onClick={() => handleJobsFilter('all')}><a>All</a></li>
+                    <li onClick={() => handleJobsFilter('remote')}><a>Remote</a></li>
+                    <li onClick={() => handleJobsFilter('onsite')}><a>Onsite</a></li>
                 </ul>
             </details>
 
